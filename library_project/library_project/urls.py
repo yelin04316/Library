@@ -16,16 +16,16 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path, include, re_path
-from rest_framework import routers
-from library_app import views
+from django.urls import path, include #, re_path 혹시 몰라서 남겨둔 코드
+from rest_framework.routers import DefaultRouter
+from library_app.views import LibraryMapViewSet
 
-router = routers.DefaultRouter()
-router.register(r'tests', views.LibraryMapViewSet)
+router = DefaultRouter()
+router.register(r'libraies', LibraryMapViewSet, basename='library')
 
 urlpatterns = [
-    path('library_app/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    re_path('admin/', admin.site.urls),
+    # re_path('admin/', admin.site.urls), 혹시 몰라 남겨둔 코드
 ]
 

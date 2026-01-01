@@ -1,5 +1,5 @@
-from django.apps import AppConfig
+# from django.apps import AppConfig
 
 
-class LibraryAppConfig(AppConfig):
-    name = 'library_app'
+# class LibraryAppConfig(AppConfig):
+#     name = 'library_app'
