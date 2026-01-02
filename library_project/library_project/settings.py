@@ -20,10 +20,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure-4!4zmrhxqkwk5vk9si)o)@p==3k2c&eoy!a=w)x1@zuu1%am05' # 클라우드 서버 만들 시 지워야 하는 코드
+# SECRET_KEY = os.environ.get('SECRET_KEY') 클라우드 서버 만들 시 활성화 하는 코드
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True # 서버 배포 시 False
 
 ALLOWED_HOSTS = ['*']
 
