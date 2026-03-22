@@ -4,7 +4,7 @@ import requests
 from library_app.models import LibraryMap
 
 API_URL = "http://data4library.kr/api/libSrch"
-AUTH_KEY = "13761d3b3d5d8014011a5f344db9843993b339d4f78719186211ea97e1761e71"
+AUTH_KEY = ""
 
 def load_libraries():
     page = 1
